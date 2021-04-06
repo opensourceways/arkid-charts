@@ -67,7 +67,7 @@ ingress:
   cert: false
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.k8s.io/cluster-issuer: letsencrypt-issuer
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
   host:
     # 需要DNS解析到ingress的ip
     # 本地调试就在 /etc/hosts里配置一下
