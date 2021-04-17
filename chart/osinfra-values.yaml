@@ -8,14 +8,28 @@ persistence:  # mysql
 
 
 mysql:
+  enabled: false
   image: mysql:5.7
   pullPolicy: IfNotPresent
   rootPassword: root
   database: arkid
 
+externalDatabase:
+  host: "192.168.1.3"
+  port: 3306
+  database: "passport"
+  user: "root"
+  password: "etherpad@123"
+
 redis:
+  enabled: true
   image: redis:5.0.3
   pullPolicy: IfNotPresent
+
+externalRedis:
+  host: ""
+  port: 6379
+  db: 0
 
 ldap:
   image: longguikeji/ark-sql-ldap:1.3.0
