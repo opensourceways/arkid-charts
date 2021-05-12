@@ -43,7 +43,7 @@ ldap:
   nodePort389:
 be:
   image: longguikeji/arkid:v2dev
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   ## service 的类型，ClusterIP, NodePort, LoadBalancer
   svcType: ClusterIP
   ## {  "limits": {"cpu": "800m","memory": "1024Mi"},"requests": {"cpu": "200m","memory": "256Mi"}}
@@ -52,7 +52,7 @@ be:
 
 fe:
   image: longguikeji/arkid-fe:v2dev
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   ## service 的类型，ClusterIP, NodePort, LoadBalancer
   svcType: ClusterIP
 
